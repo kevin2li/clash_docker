@@ -12,11 +12,19 @@ docker compose up -d
 5. 选择代理  
 - 方法一：使用webUI   
 访问 http://clash.razord.top/#/proxies 进行连接设置
-- 方法二：使用clashcli  
+- 方法二：使用clashcli(推荐)  
 详见：https://github.com/shunf4/clashcli  
 ```bash
 # 测试延迟
 docker exec -it clash ./clashcli -t
 # 选择节点
 docker exec -it clash ./clashcli
+```
+6. 宿主机终端科学上网
+```bash
+export https_port="http://127.0.0.1:7890" && export http_port="http://127.0.0.1:7890"
+```
+7. 测试
+```bash
+curl https://www.google.com
 ```

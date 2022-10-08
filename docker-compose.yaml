@@ -10,5 +10,11 @@ services:
             - '7890:7890'
         volumes:
           - ./clash_config.yaml:/root/.config/clash/config.yaml
+        networks:
+          - clash
         command: "-f /root/.config/clash/config.yaml"
         restart: 'no'
+networks:
+  clash:
+    driver: bridge
+    name: clash-network
