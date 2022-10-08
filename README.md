@@ -9,3 +9,14 @@ git clone git@github.com:kevin2li/clash_docker.git
 ```bash
 docker compose up -d
 ```
+5. 选择代理  
+- 方法一：使用webUI   
+访问 http://clash.razord.top/#/proxies 进行连接设置
+- 方法二：使用clashcli  
+详见：https://github.com/shunf4/clashcli  
+```bash
+# 测试延迟
+docker exec -it clash ./clashcli -t
+# 选择节点
+docker exec -it clash ./clashcli
+```

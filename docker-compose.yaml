@@ -10,7 +10,5 @@ services:
             - '7890:7890'
         volumes:
           - ./clash_config.yaml:/root/.config/clash/config.yaml
-        networks:
-            - nginx
         command: "-f /root/.config/clash/config.yaml"
         restart: 'no'
