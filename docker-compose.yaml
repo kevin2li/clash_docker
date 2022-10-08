@@ -14,7 +14,3 @@ services:
             - nginx
         command: "-f /root/.config/clash/config.yaml"
         restart: 'no'
-networks:
-  nginx:
-    driver: bridge
-    name: nginx-network
