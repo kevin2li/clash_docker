@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+    clash:
+        container_name: clash
+        # image: kevin2li/clash:latest
+        build: .
+        hostname: clash-host
+        ports:
+            - '9090:9090'
+            - '7890:7890'
+        volumes:
+          - ./clash_config.yaml:/root/.config/clash/config.yaml
+        networks:
+            - nginx
+        command: "-f /root/.config/clash/config.yaml"
+        restart: 'no'
+networks:
+  nginx:
+    driver: bridge
+    name: nginx-network
