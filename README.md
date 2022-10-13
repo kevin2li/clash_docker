@@ -22,7 +22,7 @@ docker exec -it clash ./clashcli
 ```
 6. 宿主机终端科学上网
 ```bash
-export https_port="http://127.0.0.1:7890" && export http_port="http://127.0.0.1:7890"
+export https_proxy="http://127.0.0.1:7890" && export http_proxy="http://127.0.0.1:7890"
 ```
 7. 测试
 ```bash
