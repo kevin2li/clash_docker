@@ -7,6 +7,7 @@ git clone git@github.com:kevin2li/clash_docker.git
 3. 替换`clash_config.yaml`为自己的代理配置文件
 4. 启动容器
 ```bash
+docker build . -t kevin2li/clash
 docker compose up -d
 ```
 5. 选择代理  
